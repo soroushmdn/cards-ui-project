@@ -1,0 +1,56 @@
+@font-face {
+  font-family: '400';
+  src: url(../fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: '500';
+  src: url(../fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: '600';
+  src: url(../fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: '700';
+  src: url(../fonts/Poppins-Bold.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: '500';
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  padding-block: 5rem;
+}
+
+// @@@@@@@@@@@@@@@ scroll bar @@@@@@@@@@@@@@@
+::-webkit-scrollbar {
+  width: 0.6rem;
+  border-radius: 0.2rem;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.2rem;
+}

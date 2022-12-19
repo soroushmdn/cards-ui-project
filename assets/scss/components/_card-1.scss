@@ -1,0 +1,130 @@
+.card-1 {
+  background: hsl(228, 66%, 97%);
+
+  .card {
+    position: relative;
+    width: 340px;
+    margin-inline: auto;
+    display: grid;
+    justify-items: center;
+    gap: 0.5rem;
+
+    background: linear-gradient(hsl(228, 66%, 80%), hsl(228, 66%, 70%));
+    padding: 3rem 1rem 5rem;
+    border-radius: 1rem 1rem 11rem 11rem;
+    box-shadow: 0 20px 40px hsl(228, 66%, 90%);
+    overflow: hidden;
+
+    .img {
+      background: hsl(228, 66%, 65%);
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 7px solid hsl(228, 66%, 85%);
+      margin-bottom: 1rem;
+      overflow: hidden;
+    }
+
+    h3,
+    span {
+      color: hsl(0, 0%, 95%);
+    }
+  }
+
+  .card__info {
+    background: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 2rem;
+    display: grid;
+    justify-items: center;
+    align-content: flex-start;
+    clip-path: circle(5% at 89% 13%);
+    transition: clip-path 0.5s;
+
+    .card__info-btn {
+      position: absolute;
+      top: 1.9rem;
+      right: 1.6rem;
+      font-size: 1.5rem;
+      color: hsl(228, 66%, 30%);
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .img {
+      background: hsl(228, 66%, 65%);
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border: 7px solid hsl(228, 66%, 90%);
+      margin-bottom: 1rem;
+      overflow: hidden;
+      transform: translateX(-2rem);
+      transition: transform 0.5s;
+    }
+
+    .card__data {
+      display: grid;
+      justify-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      transform: translateX(-3rem);
+      transition: transform 0.7s;
+
+      h4 {
+        color: hsl(228, 66%, 30%);
+      }
+
+      small {
+        color: hsl(228, 66%, 40%);
+      }
+    }
+
+    .card__social {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      transform: translateX(-4rem);
+      transition: transform 1s;
+
+      a {
+        background: linear-gradient(hsl(228, 66%, 80%), hsl(228, 66%, 70%));
+        display: flex;
+        padding: 0.4rem;
+        border-radius: 50%;
+        border: 4px solid hsl(228, 66%, 90%);
+        transition: transform 0.3s;
+      }
+
+      a:hover {
+        transform: translateY(-5px);
+      }
+
+      i {
+        color: #fff;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  // @@@@@@@@@@@@    HOVER    @@@@@@@@@@@@@
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  .card__info:hover {
+    clip-path: circle(75% at 50% 50%);
+  }
+
+  .card__info:hover .card__info-btn {
+    opacity: 0;
+  }
+
+  .card__info:hover .img,
+  .card__info:hover .card__data,
+  .card__info:hover .card__social {
+    transform: translateX(0);
+  }
+}

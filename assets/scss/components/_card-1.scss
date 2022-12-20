@@ -43,13 +43,13 @@
     display: grid;
     justify-items: center;
     align-content: flex-start;
-    clip-path: circle(5% at 89% 13%);
+    clip-path: circle(17px at 304px 36px);
     transition: clip-path 0.5s;
 
     .card__info-btn {
       position: absolute;
-      top: 1.9rem;
-      right: 1.6rem;
+      top: 1.5rem;
+      right: 1.5rem;
       font-size: 1.5rem;
       color: hsl(228, 66%, 30%);
       cursor: pointer;
@@ -140,10 +140,7 @@
     }
 
     .card__info {
-      .card__info-btn {
-        top: 1.9rem;
-        right: 1.2rem;
-      }
+      clip-path: circle(16px at 244px 35px);
     }
   }
 }

@@ -10,7 +10,7 @@
     margin-inline: auto;
     overflow: hidden;
 
-    transition: max-height 0.5s;
+    transition: max-height 0.3s;
 
     .card__img {
       position: relative;
@@ -70,7 +70,6 @@
       transform: translateY(10rem);
       transition-property: transform;
       transition-duration: 0.5s;
-      transition-delay: 0.2s;
       transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
       .rating {
@@ -105,7 +104,7 @@
         height: 250px;
 
         img {
-          width: 150px;
+          width: 170px;
         }
       }
     }

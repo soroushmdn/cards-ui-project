@@ -75,7 +75,7 @@
     }
 
     .card__btn {
-      background: hsla(84, 39%, 25%, 0.7);
+      background: hsla(0, 0%, 10%, 0.7);
       display: block;
       margin-top: 1.5rem;
       text-align: center;
@@ -93,7 +93,7 @@
   }
 
   .card__btn:hover {
-    background: hsla(84, 39%, 25%, 1);
+    background: hsla(0, 0%, 10%, 1);
   }
 
   .card:hover .card__img {

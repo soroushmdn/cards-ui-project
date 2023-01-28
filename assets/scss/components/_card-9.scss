@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'card-9-400';
+  src: url(../fonts/LexendDeca-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'card-9-700';
+  src: url(../fonts/BigShouldersDisplay-Bold.ttf);
+}
+
+.card-9 {
+  background: hsl(0, 0%, 95%);
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    display: grid;
+    gap: 1rem;
+    padding: 3rem;
+  }
+
+  .card:nth-child(1) {
+    background: hsl(31, 77%, 52%);
+    border-radius: 0.5rem 0 0 0.5rem;
+
+    button {
+      color: hsl(31, 77%, 52%);
+    }
+  }
+
+  .card:nth-child(2) {
+    background: hsl(184, 100%, 22%);
+
+    button {
+      color: hsl(184, 100%, 22%);
+    }
+  }
+
+  .card:nth-child(3) {
+    background: hsl(179, 100%, 13%);
+    border-radius: 0 0.5rem 0.5rem 0;
+
+    button {
+      color: hsl(179, 100%, 13%);
+    }
+  }
+
+  h2 {
+    font-family: 'card-9-700';
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: hsl(0, 0%, 95%);
+  }
+
+  p {
+    font-family: 'card-9-400';
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.7;
+    margin-bottom: 3rem;
+  }
+
+  button {
+    font-family: 'card-9-400';
+    justify-self: start;
+    background: hsl(0, 0%, 95%);
+    padding: 0.7rem 2rem;
+    border-radius: 2rem;
+    border: 2px solid hsl(0, 0%, 95%);
+    transition: background 0.3s, color 0.3s;
+  }
+
+  button:hover {
+    background: transparent;
+    color: hsl(0, 0%, 95%) !important;
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@    BREAKPOINT    @@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: 767px) {
+  .card-9 {
+    .cards {
+      grid-template-columns: 1fr;
+    }
+
+    .card {
+      padding: 2.5rem;
+    }
+
+    .card:nth-child(1) {
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .card:nth-child(3) {
+      border-radius: 0 0 0.5rem 0.5rem;
+    }
+
+    p {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+  }
+}

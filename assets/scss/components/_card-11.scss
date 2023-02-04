@@ -31,9 +31,7 @@
         height: 100%;
         display: grid;
         place-items: center;
-
         opacity: 0;
-        pointer-events: none;
         transition: opacity 0.5s;
 
         i {
@@ -99,14 +97,13 @@
   //   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
   //   @@@@@@@@@@@@@@@ HOVER @@@@@@@@@@@@@@@
   //   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-  .nft:active {
+  .nft:hover {
     img {
       scale: 1.1;
     }
 
     .show {
       opacity: 1;
-      pointer-events: auto;
     }
   }
 

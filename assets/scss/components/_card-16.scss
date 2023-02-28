@@ -15,7 +15,6 @@
       padding: 3rem 2rem;
 
       .card__icon {
-        color: hsl(43, 63%, 60%);
         background: linear-gradient(
           140deg,
           hsl(220, 22%, 40%),
@@ -54,6 +53,8 @@
       }
 
       button {
+        align-self: flex-end;
+
         background: linear-gradient(
           140deg,
           hsl(220, 22%, 40%),
@@ -62,6 +63,29 @@
         color: hsl(0, 0%, 100%);
         padding: 1rem;
         border-radius: 0.5rem;
+        transition: box-shadow 0.3s;
+      }
+
+      button:hover {
+        box-shadow: 0 5px 15px hsl(220, 22%, 70%);
+      }
+    }
+
+    .card:nth-child(1) {
+      .card__icon {
+        color: hsl(36, 98%, 65%);
+      }
+    }
+
+    .card:nth-child(2) {
+      .card__icon {
+        color: hsl(186, 14%, 70%);
+      }
+    }
+
+    .card:nth-child(3) {
+      .card__icon {
+        color: hsl(43, 63%, 65%);
       }
     }
 
@@ -124,8 +148,34 @@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // @@@@@@@@@    BREAKPOINT    @@@@@@@@@@@
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 991px) {
+  .card-16 {
+    .cards {
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+      padding-top: 2rem;
+
+      .card {
+        scroll-snap-align: start;
+        width: 340px;
+      }
+    }
+
+    .cards::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
 
-// color: hsl(36, 98%, 64%);
-// color: hsl(186, 14%, 60%);
+@media screen and (max-width: 374px) {
+  .card-16 {
+    font-size: 0.8rem;
+
+    .cards {
+      .card {
+        width: 280px;
+        padding: 2rem 1.5rem;
+      }
+    }
+  }
+}

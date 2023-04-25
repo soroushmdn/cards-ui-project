@@ -1,0 +1,301 @@
+.card-17 {
+  background: hsl(280, 9%, 7%);
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      padding: 3rem 2rem;
+      border: 4px solid transparent;
+      border-radius: 1rem;
+      display: grid;
+
+      .icon-box {
+        position: relative;
+        width: 128px;
+        height: 128px;
+        margin-inline: auto;
+        margin-bottom: 2.5rem;
+        border-radius: 1rem;
+
+        &__first-child,
+        &__second-child {
+          position: absolute;
+          inset: 0;
+          margin: auto;
+        }
+
+        &__first-child {
+          width: 96px;
+          height: 96px;
+          border-radius: 0.8rem;
+        }
+
+        &__second-child {
+          background: #a890b4;
+          width: 64px;
+          height: 64px;
+          border-radius: 0.6rem;
+
+          display: grid;
+          place-items: center;
+
+          i {
+            font-size: 3rem;
+            color: hsl(300, 2%, 97%);
+          }
+        }
+      }
+
+      h2,
+      p,
+      a {
+        position: relative;
+      }
+
+      h2 {
+        color: hsl(300, 2%, 97%);
+        letter-spacing: 2px;
+      }
+
+      p {
+        color: hsl(300, 2%, 85%);
+        font-family: '300';
+        margin-bottom: 1.5rem;
+      }
+
+      a {
+        background: hsl(280, 4%, 90%);
+        color: hsl(280, 9%, 7%);
+        padding: 0.8rem 1rem;
+        display: inline-block;
+        border-radius: 0.5rem;
+        align-self: flex-end;
+        transition: letter-spacing 0.3s;
+      }
+
+      a:hover {
+        letter-spacing: 1px;
+      }
+
+      .hover-box {
+        width: 128px;
+        height: 128px;
+        border-radius: 1rem;
+        position: absolute;
+        top: 3rem;
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        filter: blur(16px);
+
+        transition: transform 0.3s ease-in;
+
+        .hover-box-child {
+          background: hsl(280, 4%, 10%);
+          width: 96px;
+          height: 96px;
+          border-radius: 0.9rem;
+          position: absolute;
+          inset: 0;
+          margin: auto;
+        }
+      }
+    }
+
+    .card:nth-child(1) {
+      background: linear-gradient(hsl(280, 4%, 10%), hsl(280, 4%, 10%))
+          padding-box,
+        linear-gradient(
+            135deg,
+            hsl(13, 78%, 52%),
+            hsl(280, 4%, 10%),
+            hsl(280, 4%, 10%),
+            hsl(13, 78%, 52%)
+          )
+          border-box;
+
+      .icon-box {
+        background: linear-gradient(
+          135deg,
+          hsl(13, 78%, 22%),
+          hsl(13, 78%, 32%)
+        );
+
+        &__first-child {
+          background: linear-gradient(
+            135deg,
+            hsl(13, 78%, 32%),
+            hsl(13, 78%, 42%)
+          );
+        }
+
+        &__second-child {
+          background: linear-gradient(
+            135deg,
+            hsl(13, 78%, 52%),
+            hsl(13, 78%, 62%)
+          );
+        }
+      }
+
+      .hover-box {
+        background: linear-gradient(
+          135deg,
+          hsl(13, 78%, 22%),
+          hsl(13, 78%, 32%)
+        );
+      }
+    }
+
+    .card:nth-child(2) {
+      background: linear-gradient(hsl(280, 4%, 10%), hsl(280, 4%, 10%))
+          padding-box,
+        linear-gradient(
+            135deg,
+            hsl(330, 51%, 60%),
+            hsl(280, 4%, 10%),
+            hsl(280, 4%, 10%),
+            hsl(330, 51%, 60%)
+          )
+          border-box;
+
+      .icon-box {
+        background: linear-gradient(
+          135deg,
+          hsl(330, 51%, 30%),
+          hsl(330, 51%, 40%)
+        );
+
+        &__first-child {
+          background: linear-gradient(
+            135deg,
+            hsl(330, 51%, 40%),
+            hsl(330, 51%, 50%)
+          );
+        }
+
+        &__second-child {
+          background: linear-gradient(
+            135deg,
+            hsl(330, 51%, 50%),
+            hsl(330, 51%, 60%)
+          );
+        }
+      }
+
+      .hover-box {
+        background: linear-gradient(
+          135deg,
+          hsl(330, 51%, 30%),
+          hsl(330, 51%, 40%)
+        );
+      }
+    }
+
+    .card:nth-child(3) {
+      background: linear-gradient(hsl(280, 4%, 10%), hsl(280, 4%, 10%))
+          padding-box,
+        linear-gradient(
+            135deg,
+            hsl(227, 79%, 50%),
+            hsl(280, 4%, 10%),
+            hsl(280, 4%, 10%),
+            hsl(227, 79%, 50%)
+          )
+          border-box;
+
+      .icon-box {
+        background: linear-gradient(
+          135deg,
+          hsl(227, 79%, 25%),
+          hsl(227, 79%, 35%)
+        );
+
+        &__first-child {
+          background: linear-gradient(
+            135deg,
+            hsl(227, 79%, 35%),
+            hsl(227, 79%, 45%)
+          );
+        }
+
+        &__second-child {
+          background: linear-gradient(
+            135deg,
+            hsl(227, 79%, 45%),
+            hsl(227, 79%, 55%)
+          );
+        }
+      }
+
+      .hover-box {
+        background: linear-gradient(
+          135deg,
+          hsl(227, 79%, 25%),
+          hsl(227, 79%, 35%)
+        );
+      }
+    }
+
+    .card:hover {
+      .hover-box {
+        transform: scale(6);
+      }
+    }
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@    BREAKPOINT    @@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: 1024px) {
+  .card-17 {
+    .cards {
+      grid-template-columns: none;
+      grid-auto-flow: column;
+      grid-auto-columns: 40%;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+
+    //   scroll-padding: 1rem;
+    //   padding: 1rem;
+
+      .card {
+        scroll-snap-align: start;
+      }
+    }
+
+    .cards::-webkit-scrollbar {
+        display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card-17 {
+    .cards {
+      grid-auto-columns: 80%;
+      gap: 1.5rem;
+
+      .card {
+        padding: 2.5rem 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .card-17 {
+    font-size: 0.8rem;
+
+    .cards {
+      grid-auto-columns: 90%;
+    }
+  }
+}

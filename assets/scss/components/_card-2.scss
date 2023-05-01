@@ -146,11 +146,20 @@
 @media screen and (max-width: 1024px) {
   .card-2 {
     .cards {
-      gap: 1rem;
+      grid-template-columns: none;
+      grid-auto-flow: column;
+      grid-auto-columns: 40%;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+    }
+
+    .cards::-webkit-scrollbar {
+      display: none;
     }
 
     .card {
-      padding: 2rem 2rem;
+      padding: 2rem;
+      scroll-snap-align: start;
     }
 
     .card__data {
@@ -170,26 +179,19 @@
 @media screen and (max-width: 767px) {
   .card-2 {
     .cards {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-    }
-
-    .card {
-      padding: 2rem 3rem;
-    }
-
-    .card__data {
-      h2 {
-        font-size: 2rem;
-      }
+      grid-auto-columns: 80%;
+      gap: 1.5rem;
     }
   }
 }
 
 @media screen and (max-width: 374px) {
   .card-2 {
-    .card {
-      padding: 2rem;
+    font-size: 0.8rem;
+
+    .cards {
+      grid-auto-columns: 90%;
+      gap: 1rem;
     }
   }
 }

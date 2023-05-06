@@ -147,6 +147,25 @@
   }
 }
 
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@     truncate    @@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: 575px) {
+  .card-15 {
+    .cards {
+      .card {
+        .card__review {
+          // max-width: 10rem;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 374px) {
   .card-15 {
     .cards {
@@ -154,7 +173,6 @@
         padding: 1.5rem;
       }
 
-      
       .card:nth-child(1) {
         .card-quote {
           font-size: 6rem;

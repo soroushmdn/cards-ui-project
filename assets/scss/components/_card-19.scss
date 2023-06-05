@@ -1,0 +1,147 @@
+.card-19 {
+  background: hsl(213, 18%, 10%);
+  --br: 1rem;
+
+  .card {
+    max-width: 30rem;
+    margin-inline: auto;
+    padding: 1rem;
+    background: hsl(213, 10%, 17%);
+    border-radius: calc(var(--br) * 1.1);
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr auto auto;
+    gap: 1rem;
+
+    .card__img {
+      grid-column: 1/3;
+      grid-row: 1/3;
+      border-radius: var(--br);
+      overflow: hidden;
+
+      img {
+        display: flex;
+        object-fit: cover;
+      }
+    }
+
+    .card__price {
+      grid-column: 1/2;
+      grid-row: 2/3;
+
+      position: relative;
+      background: hsl(213, 10%, 17%);
+      border-top: var(--br) solid hsl(213, 10%, 17%);
+      border-right: var(--br) solid hsl(213, 10%, 17%);
+      border-top-right-radius: var(--br);
+
+      .card__price-inner {
+        background: hsl(213, 18%, 10%);
+        padding: 1rem 1rem 0 1rem;
+        border-top-left-radius: var(--br);
+        border-top-right-radius: var(--br);
+        box-shadow: 0 1rem 0 0 hsl(213, 18%, 10%);
+
+        a {
+          background: hsl(160, 97%, 40%);
+          color: hsl(213, 18%, 15%);
+          font-family: '700';
+          letter-spacing: 1px;
+          padding: 1rem;
+          display: block;
+          text-align: center;
+          border-radius: calc(var(--br) / 2);
+          transition: box-shadow 0.3s;
+        }
+
+        a:hover {
+          box-shadow: 0 0 8px 0 hsl(160, 97%, 40%);
+        }
+      }
+
+      .corner {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        aspect-ratio: 1;
+        background-image: radial-gradient(
+          circle at 100% 100%,
+          transparent 1rem,
+          hsl(213, 10%, 17%) 1rem
+        );
+        rotate: -90deg;
+      }
+
+      .corner-top-left {
+        top: -2rem;
+        left: 0;
+      }
+
+      .corner-bottom-right-right {
+        bottom: 0;
+        right: -2rem;
+      }
+
+      .corner-bottom-right {
+        background-image: radial-gradient(
+          circle at 100% 100%,
+          transparent 1rem,
+          hsl(213, 18%, 10%) 1rem
+        );
+        bottom: -1rem;
+        right: -1rem;
+      }
+
+      // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+      // @@@@@@@@@@@@@  second way for corners @@@@@@@@@@@@
+      // @@@@@@@@@@@@@         use SVG         @@@@@@@@@@@@
+      // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+      // .corner {
+      //   position: absolute;
+      //   width: 1rem;
+      //   height: 1rem;
+      //   fill: hsl(213, 10%, 17%);
+      // }
+
+      // .corner-top-left {
+      //   top: -2rem;
+      //   left: 0;
+      // }
+
+      // .corner-bottom-right-right {
+      //   bottom: 0;
+      //   right: -2rem;
+      // }
+
+      // .corner-bottom-right {
+      //   fill: hsl(213, 18%, 10%);
+      //   bottom: -1rem;
+      //   right: -1rem;
+      // }
+    }
+
+    .card__data {
+      grid-column: 1/3;
+      grid-row: 3/4;
+
+      padding: 1rem;
+      background: hsl(213, 18%, 10%);
+      color: hsl(210, 4%, 90%);
+      border-radius: 0 var(--br) var(--br) var(--br);
+
+      display: grid;
+      gap: 0.5rem;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        i {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

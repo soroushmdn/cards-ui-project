@@ -1,0 +1,120 @@
+.card-4 {
+  background: hsl(207, 41%, 15%);
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .card {
+    box-shadow: 0 0 30px hsl(207, 41%, 10%);
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .img {
+    background: linear-gradient(hsl(207, 41%, 40%), hsl(207, 41%, 15%));
+    position: relative;
+    text-align: center;
+    height: 400px;
+    overflow: hidden;
+    transition: 0.3s;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      transition: 0.3s transform, 0.3s filter;
+    }
+  }
+
+  .card__social {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    width: max-content;
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+
+    a {
+      background: hsl(45, 100%, 50%);
+      display: flex;
+      padding: 0.3rem;
+      border-radius: 0.2rem;
+      transform: translateX(-6rem) rotate(90deg);
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s transform, 0.3s opacity, 0.3s visibility;
+
+      i {
+        font-size: 1.3rem;
+        color: hsl(207, 41%, 10%);
+        transition: 0.3s transform;
+      }
+    }
+
+    a:nth-child(1) {
+      transition-delay: 0.3s;
+    }
+
+    a:nth-child(2) {
+      transition-delay: 0.2s;
+    }
+
+    a:nth-child(3) {
+      transition-delay: 0.1s;
+    }
+
+    a:nth-child(4) {
+      transition-delay: 0s;
+    }
+  }
+
+  .card__info {
+    text-align: center;
+    padding: 2rem 1rem;
+
+    h3 {
+      color: hsl(45, 100%, 50%);
+    }
+
+    small {
+      color: hsl(207, 41%, 80%);
+    }
+  }
+
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  // @@@@@@@@@@@@@@ HOVER @@@@@@@@@@@@@@@
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  .card:hover img {
+    transform: scale(1.05);
+    filter: brightness(60%) grayscale(100%);
+  }
+
+  .card:hover a {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .card a:hover i {
+    transform: rotate(360deg);
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@    BREAKPOINT    @@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: 767px) {
+  .card-4 {
+    .cards {
+      grid-template-columns: 1fr;
+    }
+
+    .img {
+      height: 300px;
+    }
+  }
+}

@@ -1,0 +1,151 @@
+.card-7 {
+  background: linear-gradient(hsla(0, 0%, 10%, 0.6), hsla(0, 0%, 10%, 0.6)),
+    url('../img/card-7-img-bg.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .card {
+    position: relative;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 0 20px hsl(84, 39%, 0%);
+  }
+
+  .card__img {
+    display: flex;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 1s;
+  }
+
+  .card__favorite,
+  .card__data {
+    position: absolute;
+  }
+
+  .card__favorite {
+    top: 1.5rem;
+    right: -2rem;
+    color: hsl(0, 0%, 95%);
+    font-size: 2rem;
+    transition: 0.3s color, 0.3s right;
+  }
+
+  .card__data {
+    background: hsla(0, 0%, 10%, 0.2);
+    backdrop-filter: blur(10px);
+    bottom: -100%;
+    left: 0;
+    padding-top: 1.5rem;
+    transition: bottom 0.5s;
+
+    .card__title {
+      font-family: '700';
+      color: hsl(0, 0%, 95%);
+      padding-inline: 1.5rem;
+    }
+
+    .card__rating {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding-inline: 1.5rem;
+
+      img {
+        width: 50px;
+      }
+
+      span {
+        color: hsl(46, 80%, 51%);
+        font-size: 1.2rem;
+      }
+    }
+
+    .card__description {
+      color: hsl(0, 0%, 80%);
+      padding-inline: 1.5rem;
+      display: block;
+    }
+
+    .card__btn {
+      background: hsla(0, 0%, 10%, 0.7);
+      display: block;
+      margin-top: 1.5rem;
+      text-align: center;
+      padding: 0.8rem;
+      color: hsl(0, 0%, 95%);
+      transition: background 0.3s;
+    }
+  }
+
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  // @@@@@@@@@@@      HOVER       @@@@@@@@@@@
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  .card__favorite:hover {
+    color: hsl(46, 80%, 51%);
+  }
+
+  .card__btn:hover {
+    background: hsla(0, 0%, 10%, 1);
+  }
+
+  .card:hover .card__img {
+    transform: scale(1.1);
+  }
+
+  .card:hover .card__favorite {
+    right: 1rem;
+  }
+
+  .card:hover .card__data {
+    bottom: 0;
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@    BREAKPOINT    @@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: 1023px) {
+  .card-7 {
+    .cards {
+      grid-template-columns: none;
+      grid-auto-flow: column;
+      grid-auto-columns: 40%;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+    }
+
+    .card {
+      scroll-snap-align: start;
+    }
+
+    .cards::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card-7 {
+    .cards {
+      grid-auto-columns: 85%;
+      gap: 1.5rem;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card-7 {
+    .cards {
+      grid-auto-columns: 90%;
+    }
+  }
+}

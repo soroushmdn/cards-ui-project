@@ -1,0 +1,181 @@
+.card-12 {
+  position: relative;
+  background: hsl(185, 75%, 39%);
+  overflow: hidden;
+
+  .bg {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+  }
+
+  .bg-top {
+    top: 0;
+    left: 0;
+    transform: translate(-25%, -50%);
+  }
+
+  .bg-bottom {
+    bottom: 0;
+    right: 0;
+    transform: translate(25%, 50%);
+  }
+
+  .card {
+    position: relative;
+    background: hsl(0, 0%, 100%);
+    max-width: 350px;
+    margin-inline: auto;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  .card__bg {
+    display: flex;
+  }
+
+  .card__info {
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    text-align: center;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      border: 5px solid hsl(0, 0%, 100%);
+    }
+
+    h2 {
+      font-family: '700';
+      color: hsl(229, 23%, 23%);
+    }
+
+    p {
+      font-family: '400';
+      color: hsl(227, 10%, 46%);
+    }
+  }
+
+  .card__social {
+    border-top: 1px solid hsla(0, 0%, 59%, 0.2);
+
+    button {
+      background: hsl(40, 93%, 50%);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: hsl(0, 0%, 100%);
+      padding: 0.7rem 1.4rem;
+      border-radius: 2rem;
+      margin-block: 1.5rem;
+      margin-inline: auto;
+      font-size: 1rem;
+      transition: 0.3s;
+
+      i {
+        font-size: 1.3rem;
+        transition-duration: 0.5s;
+        transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+    }
+
+    ul {
+      display: grid;
+      padding-inline: 1.5rem;
+      display: grid;
+      gap: 1rem;
+      max-height: 0px;
+      transition: 0.5s;
+
+      a {
+        color: hsl(0, 0%, 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+        padding: 1rem;
+        border-radius: 2rem;
+        opacity: 0;
+        transition-duration: 0.5s;
+        transition-delay: 0.4s;
+
+        i {
+          font-size: 1.2rem;
+        }
+      }
+
+      a:nth-child(1) {
+        background: hsl(213, 13%, 16%);
+        transform: translateX(-8rem);
+      }
+
+      a:nth-child(2) {
+        background: hsl(210, 90%, 40%);
+        transform: translateX(-16rem);
+      }
+
+      a:nth-child(3) {
+        background: hsl(337, 79%, 61%);
+        transform: translateX(-24rem);
+      }
+    }
+  }
+
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  // @@@@@@@@@@@       HOVER      @@@@@@@@@@@
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  button:hover {
+    background: hsla(40, 93%, 50%, 0.8);
+  }
+
+  // ul:has(a:hover) a:not(:hover) {
+  //   opacity: 0.5;
+  //   scale: 0.95;
+  //   filter: blur(5px);
+  // }
+
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  // @@@@@@@@@@@    JS CLASSES    @@@@@@@@@@@
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  .card__social.active button i {
+    transform: rotate(-180deg);
+  }
+
+  .card__social.active ul {
+    max-height: 200px;
+    margin-bottom: 1.5rem;
+  }
+
+  .card__social.active a:nth-child(1),
+  .card__social.active a:nth-child(2),
+  .card__social.active a:nth-child(3) {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@    BREAKPOINT    @@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: 767px) {
+  .card-12 {
+    .bg {
+      width: 500px;
+      height: 500px;
+    }
+
+    .bg-top {
+      transform: translate(-50%, -50%);
+    }
+
+    .bg-bottom {
+      transform: translate(50%, 50%);
+    }
+  }
+}

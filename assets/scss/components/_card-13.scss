@@ -1,0 +1,113 @@
+.card-13 {
+  background: hsl(204, 43%, 93%);
+  font-family: '300';
+
+  .card {
+    max-width: 700px;
+    margin-inline: auto;
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  .top,
+  .left,
+  .right {
+    padding: 3rem 2.5rem;
+  }
+
+  .top {
+    background: hsl(0, 0%, 100%);
+
+    h2 {
+      font-family: '500';
+      color: hsl(179, 62%, 43%);
+      margin-bottom: 1.5rem;
+    }
+
+    h3 {
+      color: hsl(71, 73%, 54%);
+      letter-spacing: 1.5px;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: hsl(218, 22%, 67%);
+    }
+  }
+
+  .bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    h3 {
+      color: hsl(0, 0%, 100%);
+      margin-bottom: 1rem;
+      font-family: '400';
+    }
+
+    .left {
+      background: hsl(179, 62%, 40%);
+      color: hsl(0, 0%, 100%);
+
+      .price {
+        margin-bottom: 2.5rem;
+
+        .value {
+          display: flex;
+          align-items: center;
+          gap: 0.7rem;
+
+          h2 {
+            font-size: 2rem;
+            font-family: '500';
+          }
+
+          small {
+            color: hsl(179, 62%, 80%);
+          }
+        }
+      }
+
+      button {
+        background: hsl(71, 73%, 54%);
+        color: hsl(0, 0%, 100%);
+        width: 100%;
+        padding: 1rem;
+        border-radius: 0.2rem;
+        box-shadow: 0px 10px 10px hsl(179, 62%, 38%);
+        transition: box-shadow 0.3s;
+      }
+
+      button:hover {
+        box-shadow: 0px 10px 30px hsl(179, 62%, 35%);
+      }
+    }
+
+    .right {
+      background: hsl(179, 62%, 45%);
+
+      li {
+        color: hsl(179, 62%, 95%);
+      }
+    }
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@@@    BREAKPOINT    @@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: 767px) {
+  .card-13 {
+    font-size: 0.9rem;
+
+    .top,
+    .left,
+    .right {
+      padding: 2rem 1.5rem;
+    }
+
+    .bottom {
+      grid-template-columns: 1fr;
+    }
+  }
+}

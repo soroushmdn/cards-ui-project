@@ -1,0 +1,80 @@
+.card-21 {
+  .container {
+    .slides {
+      position: relative;
+      overflow: hidden;
+
+      width: 100%;
+      height: 400px;
+
+      .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        animation: slide-show 12s infinite;
+      }
+
+      img {
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        height: 100%;
+      }
+
+      .slide-1 {
+      }
+
+      .slide-2 {
+        animation-delay: 4s;
+      }
+
+      .slide-3 {
+        animation-delay: 8s;
+      }
+
+      @keyframes slide-show {
+        0% {
+          opacity: 0;
+        }
+
+        10% {
+          opacity: 1;
+        }
+
+        20%,
+        30% {
+          opacity: 1;
+          scale: 1.05;
+        }
+
+        50% {
+          opacity: 0;
+        }
+      }
+    }
+
+    .hover-container {
+      margin-top: 10rem;
+
+      display: flex;
+      gap: 1rem;
+      height: 500px;
+
+      .card {
+        flex: 1;
+        transition: 0.3s;
+
+        img {
+          object-fit: cover;
+          object-position: center;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .card:hover {
+        flex: 3;
+      }
+    }
+  }
+}

@@ -1,0 +1,181 @@
+.card-3 {
+  background: hsl(207, 43%, 90%);
+  overflow: hidden;
+
+  .container {
+    position: relative;
+  }
+
+  .cards {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    .card {
+      background: linear-gradient(
+        135deg,
+        hsla(207, 43%, 100%, 0.5),
+        hsla(207, 43%, 95%, 0.2)
+      );
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 1px hsla(207, 43%, 0%, 0.1);
+
+      position: relative;
+      border-radius: 1rem;
+
+      display: grid;
+      justify-items: center;
+      padding: 3rem 1rem;
+
+      overflow: hidden;
+
+      img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 2px solid hsl(207, 43%, 100%);
+        margin-bottom: 2rem;
+      }
+
+      h3 {
+        color: hsl(0, 0%, 15%);
+      }
+
+      small {
+        color: hsl(0, 0%, 40%);
+        margin-bottom: 1.5rem;
+      }
+
+      .btn {
+        background: linear-gradient(
+          45deg,
+          hsla(207, 43%, 100%, 1),
+          hsla(207, 43%, 95%, 0.5)
+        );
+        color: hsl(0, 0%, 20%);
+        font-family: '400';
+        border-radius: 0.5rem;
+        padding: 0.7rem 1.5rem;
+        transition: 0.5s box-shadow;
+      }
+
+      .btn:hover {
+        box-shadow: 0 0 20px hsl(207, 43%, 80%);
+      }
+
+      .social {
+        position: absolute;
+        left: -2rem;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        height: max-content;
+
+        display: grid;
+        gap: 1rem;
+
+        i {
+          font-size: 1.5rem;
+          color: hsl(0, 0%, 15%);
+        }
+
+        a {
+          display: flex;
+        }
+
+        a:nth-child(1),
+        a:nth-child(2),
+        a:nth-child(3) {
+          transition: 0.5s transform;
+        }
+
+        a:nth-child(2) {
+          transition-delay: 0.1s;
+        }
+
+        a:nth-child(3) {
+          transition-delay: 0.2s;
+        }
+      }
+    }
+
+    // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    // @@@@@@@@@       HOVER      @@@@@@@@@@@
+    // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    .card:hover {
+      .social {
+        a:nth-child(1),
+        a:nth-child(2),
+        a:nth-child(3) {
+          transform: translateX(3rem);
+        }
+      }
+    }
+  }
+
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  // @@@@@@@@@      CIRCLES     @@@@@@@@@@@
+  // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+  .circle-1,
+  .circle-2 {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+  }
+
+  .circle-1 {
+    background: linear-gradient(135deg, hsl(239, 47%, 50%), hsl(239, 47%, 90%));
+    top: 3rem;
+    left: -5rem;
+  }
+
+  .circle-2 {
+    background: linear-gradient(135deg, hsl(187, 83%, 50%), hsl(187, 83%, 90%));
+    bottom: 3rem;
+    right: -5rem;
+  }
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// @@@@@@@@@    BREAKPOINT    @@@@@@@@@@@
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@media screen and (max-width: 1024px) {
+  .card-3 {
+    .cards {
+      grid-template-columns: none;
+      grid-auto-flow: column;
+      grid-auto-columns: 40%;
+      overflow-x: scroll;
+      scroll-snap-type: x mandatory;
+
+      .card {
+        scroll-snap-align: start;
+      }
+    }
+
+    .cards::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card-3 {
+    .cards {
+      grid-auto-columns: 80%;
+      gap: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .card-3 {
+    font-size: 0.8rem;
+
+    .cards {
+      grid-auto-columns: 90%;
+    }
+  }
+}
